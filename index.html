@@ -13102,7 +13102,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {}, "toc_section_display": true, "toc_window_display": false};
+            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -13126,17 +13126,6 @@ $( document ).ready(function(){
 <li>Conclusion &amp; Summary</li>
 </ul>
 <hr>
-<h1 id="Background-and-Theory:">Background and Theory:<a class="anchor-link" href="#Background-and-Theory:">&#182;</a></h1>\begin{equation*}
-F_g = G \frac{m_1 m_ 2}{r^2} 
-\label{eq:Fg} \tag{1}
-\end{equation*}<center>
-<img src="cave_scheme.png" class="bg-primary mb-1" width="280px">
-    <figcaption><b>Fig. 1:</b> Schematic of Cavendish Apparatus (Credit: GOOGLE)</figcaption>
-</center><p><br><br><br><br></p>
-<p><strong>Message Signal:</strong> $ A_m sin(2\pi f_mt) $</p>
-<p><strong>Carrier Signal:</strong> $ A_c sin(2\pi f_ct) $</p>
-<p><strong>FM Signal:</strong> $ A_c sin(2\pi f_c t + m_i sin(2 \pi f_mt)) $</p>
-<p><strong>Modulation Index:</strong> $ \frac{f_{dev}}{f}  $</p>
 
 </div>
 </div>
@@ -13144,7 +13133,50 @@ F_g = G \frac{m_1 m_ 2}{r^2}
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="FM-Communication">FM Communication<a class="anchor-link" href="#FM-Communication">&#182;</a></h2><h3 id="Experimental-Set-Up">Experimental Set Up<a class="anchor-link" href="#Experimental-Set-Up">&#182;</a></h3><h3 id="Methodology">Methodology<a class="anchor-link" href="#Methodology">&#182;</a></h3>
+<h1 id="Background-and-Theory:">Background and Theory:<a class="anchor-link" href="#Background-and-Theory:">&#182;</a></h1><h2 id="Communication-System">Communication System<a class="anchor-link" href="#Communication-System">&#182;</a></h2><p>In a broad sense, a "Communication System" refers to the sending, receiving and processing of information by electronic means. Communications started with wire telegraphy in the eighteen forties, developing with telephony some decades later and radio at the beginning of this century. Radio communication, made possible by the invention of the triode tube, was greatly improved by the work done during World War II. It subsequently became even more widely used and refined through the invention and use of the transistor, integrated circuits and other semiconductor devices. More recently, the use of satellites and fiber optics has made communications even more widespread, with an increasing emphasis on computer and other data communications.</p>
+<p>The processes in such communication system is concerned with the sorting, processing and sometimes storing of information before its transmission <strong>[1]</strong>. The actual transmission then follows, with further processing and the filtering of noise. Finally we have reception, which may include processing steps such as decoding, storage and interpretation. In this context, forms of communications include radio telemetry and telegraphy, broadcasting, mobile communications, computer communications, and so on. The functioning of such systems relies heavily on the use of amplifiers and oscillators. Such system also makes use of concepts such as noise, modulation and information theory. Fig 1. summarizes a basic communication system model.</p>
+<center><br>
+<img src="comms.png" class="bg-primary mb-1" width="480px">
+    <figcaption><b>Fig. 1:</b> Schematic of a basic communication system (Credit: IEEE)</figcaption>
+</center><h3 id="Information:">Information:<a class="anchor-link" href="#Information:">&#182;</a></h3><p>The principal aim of any communication system is to convey a message. This message comes from the information source, which originates it, in the sense of selecting one message from a group of messages. Although this applies more to telegraphy than to entertainment broadcasting, for example, it may nevertheless be shown to apply to all forms of communications <strong>[2]</strong>.</p>
+<p>Information itself is that which is conveyed. The amount of information contained in any given message can be measured in bits (digitally). The greater the total number of possible selections, the larger the amount of information conveyed. It must be realized that no real information is conveyed by a redundant message. Redundancy is not wasteful under all conditions. It also helps a message to remain intelligible under difficult or noisy conditions.</p>
+<h3 id="Transmitter:">Transmitter:<a class="anchor-link" href="#Transmitter:">&#182;</a></h3><p>Unless the message arriving from the information source is electrical in nature, it will be unsuitable for immediate transmission. Even then, a lot of work must be done to make such a message suitable. This may be demonstrated in single sideband modulation, where it is necessary to convert the incoming sound signals into electrical variations, to restrict the range of the audio frequencies and then to compress their amplitude range. All this is done before any modulation <strong>[1,2]</strong>. In wired systems no processing may be required, but in long-distance communications, a transmitter is required to process, and possibly encode, the incoming information so as to make it suitable for transmission and subsequent reception.</p>
+<h3 id="Radio-Transmitter:">Radio Transmitter:<a class="anchor-link" href="#Radio-Transmitter:">&#182;</a></h3><p>Eventually, in a transmitter, the information modulates the carrier, i.e. is superimposed on a high-frequency sine wave. The actual method of modulation varies from one system to another <strong>[1]</strong>. Modulation may be high level or low level, and the system itself may be amplitude modulation, frequency modulation, pulse modulation or any variation or combination of these, depending on the requirements. Figure 2 shows some common forms of wave modulation.</p>
+<center><br>
+<img src="mods_ex.png" class="bg-primary mb-1" width="480px"><br>
+    <figcaption><b>Fig. 2:</b> Modulation examples: amplitude, frequency, and phase modulation (Credit: GOOGLE)</figcaption>
+</center><h3 id="Channel-&#8211;-Noise:">Channel &#8211; Noise:<a class="anchor-link" href="#Channel-&#8211;-Noise:">&#182;</a></h3><p>It is inevitable that a signal will deteriorate during the process of transmission and reception as a result of some distortion in the system, or because of the introduction of noise, which is unwanted energy, usually of random character, present in a transmission system, due to a variety of causes. Since noise will be received together with the signal, it places a limitation on the transmission system as a whole. When noise is severe, it may mask a given signal so much that the signal becomes unintelligible and therefore useless. Noise may interfere with signal at any point in a communication system, but it will have its greatest effect when the signal is weakest. This means that noise in the channel or at the input to the receiver is the most noticeable.</p>
+<h3 id="Receiver:">Receiver:<a class="anchor-link" href="#Receiver:">&#182;</a></h3><p>There are a great variety of receivers in a given communications system, since the exact form of a particular receiver is influenced by a great many requirements. Among the more important requirements are the modulation system used, the operating frequency and its range and the type of display required, which in turn depends on the destination of the intelligence received.</p>
+<p>Receivers run the whole range of complexity from a very simple crystal receiver, with headphones, to a far more complex radar receiver, with its involved antenna arrangements and visual display system. Whatever the receiver, its most important function is demodulation (and sometimes also decoding) Both these processes are the reverse of the corresponding transmitter modulation processes <strong>[2]</strong>.</p>
+<p>As stated initially, the purpose of a receiver and the form of its output influence its construction as much as the type of modulation system used. The output of a receiver may be fed to a loudspeaker, display monitor, e.t.c for message interpretation. In each instance different arrangements must be made, each affecting the receiver design. Note that the transmitter and receiver must be in agreement with the modulation and coding methods used.</p>
+<h2 id="Communication-through-Frequency-Modulation-(FM)">Communication through Frequency Modulation (FM)<a class="anchor-link" href="#Communication-through-Frequency-Modulation-(FM)">&#182;</a></h2><p>For the purposes of this project, we are only interested in Frequency Modulation (FM). In this scheme, the frequency of the carrier changes in accordance with the input modulation signal as shown in Figure 2 <strong>[3]</strong>. Notice that in FM, only the frequency changes while the amplitude remains the same. Unlike AM, FM is more robust against signal-amplitude-fading. For this reason FM is more attractive in commercial FM radio. It can be shown that in FM, the modulated carrier contains an infinite number of side band due to modulation. For this reason, FM is also bandwidth inefficient.</p>
+<p>A summary of the FM schema is as follows <strong>[2]</strong>:</p>
+<ul>
+<li><p>The carrier frequency shifts back and forth from the nominal frequency by $\Delta f$, where $\Delta f$, is the frequency deviation.</p>
+</li>
+<li><p>During this process, the modulated carrier creates an infinite number of spectral components, where higher order spectral components are negligible.</p>
+</li>
+<li><p>The approximate FM bandwidth is given by the  Carson’s Rule:</p>
+<ul>
+<li>FM Bandwidth $= 2f (1+ \beta)$</li>
+<li>$f$ = Base band frequency</li>
+<li>$\beta$ = Modulation index</li>
+<li>$\beta = \frac{\Delta f}{f} $</li>
+<li>Frequency deviation $ = \Delta f$</li>
+</ul>
+</li>
+<li><p>The various signals have the following waveforms:</p>
+<ul>
+<li><p>Message Signal: $ A_m sin(2\pi f_mt) $</p>
+</li>
+<li><p>Carrier Signal: $ A_c sin(2\pi f_ct) $</p>
+</li>
+<li><p>FM Signal: $ A_c sin(2\pi f_c t + m_i sin(2 \pi f_mt)) $</p>
+</li>
+</ul>
+</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -13152,25 +13184,20 @@ F_g = G \frac{m_1 m_ 2}{r^2}
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h1 id="Experimental-Progress-Report">Experimental Progress Report<a class="anchor-link" href="#Experimental-Progress-Report">&#182;</a></h1><h2 id="Day-1:">Day 1:<a class="anchor-link" href="#Day-1:">&#182;</a></h2><p>Read through the TeachSpin manual and required materials before toying with the equipment. Last team to use this apparatus did not take after themselves so had to clean up their set up. Observed they did not zero the power supply on any of the systems. Played with the Signal Generator and Fourier Methods system to understand them better.</p>
+<h1 id="Experimental-Progress-Report">Experimental Progress Report<a class="anchor-link" href="#Experimental-Progress-Report">&#182;</a></h1><h2 id="Day-1:">Day 1:<a class="anchor-link" href="#Day-1:">&#182;</a></h2><p>We read through the TeachSpin manual and then started playing with the "Fourier Methods" equipment to familiarize ourselves better with it. Once we had some idea of what each module of interest does in the Fourier Methods apparatus and how the inputs and outputs to them worked, we moved on to further investigate the Signal Generator. The Signal Generator had a very intuitive interface and we quickly learned how to generate general sinusoidals with it. We also observed that there was an option to also generate a FM signals directly from it.</p>
+<p>Before generating any signals/performing any signal analysis, we created a toy simulation with the following characteristics (arbitrarily chosen amplitude of 1):</p>
 <ul>
-<li>worked on getting transmitter module ready<ul>
-<li>waveform generator -&gt; FM</li>
-<li>VCO </li>
-<li>Oscilloscope</li>
-</ul>
+<li><p>Message Frequency = 1 Hz</p>
 </li>
-<li>demodulator circuit<ul>
-<li>implementation</li>
-</ul>
+<li><p>Carrier Frequency = 25 Hz</p>
 </li>
-<li>simulation of simple problem<ul>
-<li>compare results</li>
-</ul>
+<li><p>Modulation Index = 10</p>
 </li>
-<li>reread the manual (saw that LCR and Audio Amp used)</li>
-<li>planned on reading fully and doing the manual exp</li>
 </ul>
+<p>Using the simulation data as our reference, we used the signal generator to physically replicate the simulation result. Using the Signal Generator as our transmitter in this case, we successfully replicated the message and carrier signals respectively.</p>
+<p>Upon literature review of frequency demodulation, we found a scheme to demodulate the FM generated by the Signal Generator using the <em>Multiplier, Voltage Controlled Oscillation (VCO)</em>, and <em>Filter</em> modules of the Fourier Methods apparatus.</p>
+<p>After, calibrating the filter threshold and quality factor controls on the Filter module, we also successfully demodulated the FM signal to recover the original message signal.</p>
+<p>Since, we successfully completed the lab assignment in one trial and in around an hour of our first day, we were a little skeptical of our work and decided to reread the manual to see if we missed anything. We realized that chapter 18 (Demodulation of FM Waves) outlined a schematic of a demodulator that used the <em>LCR</em> and <em>Power Audio Amp.</em> modules which we hadn't used in our implementation. We decided to follow the exercise of demodulation as described in chapter 18 to the T when we come to the lab next time.</p>
 
 </div>
 </div>
@@ -13178,44 +13205,8 @@ F_g = G \frac{m_1 m_ 2}{r^2}
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Day-2:">Day 2:<a class="anchor-link" href="#Day-2:">&#182;</a></h2><p>Work on actual lab:</p>
-<ul>
-<li>followed the manual exp to the T</li>
-<li>generated the FM using the Fourier Method system only</li>
-<li>tested the set up with 770 </li>
-<li>implemented the demodulator<ul>
-<li>reason for adding LCR + Audio amp ONLY because of the book example</li>
-</ul>
-</li>
-<li>looked at signal straight from LCR</li>
-<li>looked at signal after passing through low pass</li>
-<li>successfully recovered/witnessed the FM signal</li>
-</ul>
-<p>Simultaneously, we worked on "car jacking"</p>
-<ul>
-<li>borrowed arduino's and Rf120 modules from Dr. K</li>
-<li>ran into issues. the Rf120 module can only receive and transmit from other Rf120 modules</li>
-<li>found a potential open source solution to read signals using computer<ul>
-<li>issue: security alert from macbook</li>
-</ul>
-</li>
-<li>currently thinking about buying a transmitter/receiver for Arduino</li>
-<li>also thinking about making an FM antenna</li>
-<li>plan on either getting the car jacking project or radio channel from antenna to speaker through our circuit project or both done</li>
-</ul>
-<h2 id="Day-3:">Day 3:<a class="anchor-link" href="#Day-3:">&#182;</a></h2><ul>
-<li>report on how our system was vandalized by other group</li>
-<li>attempts at making antenna</li>
-<li>first try at ethernet antenna</li>
-<li>recieved signal but low freq</li>
-<li>demodulated but no audio</li>
-<li>tried various ways of reading higher freq but ultimately failed</li>
-<li>created a dipole antenna using coax<ul>
-<li>didn't work</li>
-<li>isolated issue to be a problem of solder</li>
-</ul>
-</li>
-</ul>
+<h2 id="Day-2:">Day 2:<a class="anchor-link" href="#Day-2:">&#182;</a></h2><p>Chapter 18 of the manual does a great job at describing how to set up a transmitter and receiver system using the Fourier Methods apparatus only (no Signal Generator needed). It also motivates each step of the set up process by explaining the background signal processing knowledge and advices us to use the 770 Signal Processor to make sure the frequency deviations of the FM are as expected and stable.</p>
+<p>In summary, we used a 5 V 6 Hz signal using the <em>DC power</em> module of the Fourier Methods apparatus as our message signal and modulated it with a V and Hz signal using the <em>VCO</em> module to create the carrier signal.</p>
 <p><br></p>
 <center>
 <figure class="half" style="display:flex">
@@ -13223,11 +13214,58 @@ F_g = G \frac{m_1 m_ 2}{r^2}
 <img src="swire.png" class="bg-primary mb-1" width="280px">
 </figure>
     <figcaption><b>Fig. 5:</b> Issues with the Torsional Balance Set Up (broken balancing rod and snapped torsion wire)</figcaption>
-</center><h2 id="Day-4:">Day 4:<a class="anchor-link" href="#Day-4:">&#182;</a></h2><ul>
-<li>remade the antenna using coax</li>
-<li>things worked but low freq reception nevertheless</li>
-<li>no radio station audio could be played</li>
+</center><p>Once we ensured using the 770 Signal Processor scope that our carrier signal is of the waveform defined by chapter 18, we started reading into how to set up the demodulator circuit. We realized that our initial demodulator circuit was indeed correct (as expected) and the LCR and Power Audio Amp modules are actually not required for the demodulation process. It is only for this one particular example that the manual goes over for which the use of these modules are recommended so that the demodulated signal is very clean.</p>
+<p>We looked at signals straight from the LCR, the multiplier and before the low pass filter to make sure that everything looks reasonable and thankfully they all did! We successfully recovered the message signal using the demodulation circuit described by the book.</p>
+<p>While two of us were working on the demodulation, the other group mate was simultaneously working on the "car jacking" project. We received permission from our TA and instructor over email before undertaking this project. We were only targeting our (Mohammad's) car for this project. There was absolutely no nefarious intentions behind this, only a spirit of science.</p>
+<p>We borrowed an Arduino Nano and a NRF24L01 module from Dr. Kunori to create a reciever/transmitter for this project to read, record and re-emit key fob signals. With heavy inspiration from programs written by a group at UC Berkeley, we successfully wrote a Arduino sketch to read and transmit RF signals using the NRF24L01 module. However, we quickly ran into an issue - NRF24L01 modules can only communicate with other NRF24L01 modules. We looked at other alternatives to this arduino set up, but all our efforts were futile. It dawned on to us at the 11th hour that we can buy general purpose receiver and transmitter modules for the Arduino online, but the fastest delivery was not soon enough for us for the purposes of this lab. Nevertheless, Sam purchased them and will be continuing on this project as a personal hobby.</p>
+<p>Since, we still had some considerable time left and were done with our main lab, we asked Leo for some inspiration/related experiments. He recommended we try and create a FM antenna and use our demodulation circuit to play back any received radio station broadcasts.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Day-3:">Day 3:<a class="anchor-link" href="#Day-3:">&#182;</a></h2><p>We come to the lab and find that our entire apparatus was 'vandalized' in the sense that some other group (Mark and Amber) took apart our set up (took multiple coax cables, oscilloscope, connectors)  for their own experiment. Thus, we had to remake our demodulator circuit.</p>
+<p>The night before all of us conducted some literature review to learn about how to make FM antenna using everyday materials and we found two promising avenues - one using an ethernet cable and one using a coax cable.</p>
+<p>We asked for a spare ethernet and coax cable from Kim and him, being the kind person he is, provided us with them.</p>
+<p>Using Occam's Razor as our philosophy, our first attempt saw us using the ethernet cable as an antenna. The idea was to cut off one end of the cable, strip all the wires off the insulating plastic and twist them to form a single wire structure.</p>
+<p>The readout worked, we did see FM signals. However, they were no where near the bandwidth of US radio stations. We picked up signals on the range of 2 to 6 MHz while the range needed was 80 MHz to 120 MHz. Nevertheless, we demodulated the signal and set up a circuit to hear it through the speaker output. Our hope was to pick up on secretive signals from someone but there was no broadcasting sadly.</p>
+<p>By necessity now we moved to trying to create a dipole antenna using the coax cable. The following are the steps needed to do so:</p>
+<ol>
+<li><p>Gathered the required materials:</p>
+<ul>
+<li><p>50 ohm coaxial wire with copper shielding</p>
+</li>
+<li><p>FM receiver with a coaxial connector</p>
+</li>
+<li><p>Wire cutters</p>
+</li>
+<li><p>Soldering equipment</p>
+</li>
 </ul>
+</li>
+<li><p>Calculated the length of cable needed to form the "legs" of the antenna using the $length (inches) = \frac{5905 A}{f (Hz)}$ <strong>[2]</strong>. We used 29 inches cable in hopes of receiving 87 - 100 MHz signals.</p>
+</li>
+<li><p>Cut off one end of the coaxial cable</p>
+</li>
+<li><p>Strip half of the antenna's overall length from the end of the coaxial cable</p>
+</li>
+<li><p>Solder the coaxial cable's shielding to the tubing</p>
+</li>
+<li><p>Connect the coaxial cable to the Fourier Methods demodulation circuit</p>
+</li>
+</ol>
+<p>Our first attempt at this coax antenna was a glorious failure since we didn't receive any signals whatsoever. Upon further tinkering, we isolated the issue to a poor soldering job. We planned on coming the next day to remake a similar antenna.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Day-4:">Day 4:<a class="anchor-link" href="#Day-4:">&#182;</a></h2><p>Our second attempt at creating an FM antenna using coax cable was successful in the sense that we picked up on FM signals. However, our reception bandwidth (15 - 18 MHz) was still far below of our expected bandwidth. We moved the cable at various places and elevations within the room. This showed that having the cable pointing towards the door/windows of the room at higher elevation helped (new bandwidth at 21 MHz) however it is still on our desired range.</p>
+<p>Due to time constraints and external commitments, we could not debug this experiment further. Regardless, it was a really fun use of our spare time.</p>
 <p><br></p>
 <center>
 <figure class="half" style="display:flex">
@@ -13238,33 +13276,19 @@ F_g = G \frac{m_1 m_ 2}{r^2}
 </figure>
 <br>
     <figcaption><b>Fig. 11:</b> (a) Zip lock clamps holding mass in place (b) Data Acquisition Set Up using Camera (c) Picture taken by Camera</figcaption>
-</center>
+</center><hr>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Conclusions-and-Summary">Conclusions and Summary<a class="anchor-link" href="#Conclusions-and-Summary">&#182;</a></h1><ul>
-<li>conclusion 1: successfully generated a FM for a message freq</li>
-<li>conclusion 2: successfully demodulated the FM to receive the message freq<ul>
-<li>numbers of expected waveform</li>
-<li>numbers of simmed waveform</li>
-<li>uncertainties</li>
-<li>conclude that within margin of error</li>
-</ul>
-</li>
-<li>summary 1: failed attempt at car jacking<ul>
-<li>software worked</li>
-<li>hardware missing/issue</li>
-</ul>
-</li>
-<li>summary 2: failed attempt at antenna making<ul>
-<li>poor reception in basement</li>
-<li>possible resistance, leg length and knot issues </li>
-</ul>
-</li>
-</ul>
+<h1 id="Conclusions-and-Summary">Conclusions and Summary<a class="anchor-link" href="#Conclusions-and-Summary">&#182;</a></h1><p>In this lab, we were asked to use the concepts of FM communication to encode and decode a message signal using the Fourier Methods apparatus. We have demonstrated two different ways of generating a message signal (<em>Signal Generator</em> and <em>DC Power modules of Fourier Methods</em>) and have devised a transmitter to encode the message signal into a carrier signal using the Voltage Controlled Oscillations module of the Fourier Methods Apparatus. Moreover, we also implemented two different circuits for demodulation of an FM wave - one using just the Multiplier and Filter modules and the other using LCR and Power Audio Amp module in addition to the aforementioned two modules.</p>
+<p>Figure X shows the message and frequency modulated signals for a toy simulation we devised to gauge the accuracy of our experimental set up. As demonstrated by Figure Y, it is observed that our experiment qualitatively agrees with the simulation (the amplitudes (voltages) for the simulation was chosen arbitrarily which is why they don't match). This verifies the accuracy of the working philosophy of the transmitter and receiver circuits we assembled.</p>
+<p>Furthermore, we also validated our system by recreating the experiment outlined in Chapter 18 of the Fourier Methods Manual. Figure Z shows our modulated and demodulated waveform with the message wave signal parameters of V and Hz which is in $\%$ agreement with that of the manual.</p>
+<p>Lastly, we want to report on the status of two other projects that we undertook as a part of this lab assignment. Our first project envisioned the use of a RF transmitter/receiver enabled micro-controller to intercept and record the signals of a target key fob so as to re-emit the signals at a later time without the inclusion of the key fob. We used an Arduino nano with a RFL2401 module to physically realize the mentioned system. While, we successfully devised the software required for this project, due to lack of accessibility to required hardware modules we could not bring this project to fruition.</p>
+<p>For the second project, we attempted to create an FM antenna by using the principles of the radiation structure of an electric dipole. We devised two prototype antenna's (one using ethernet cable and the other a coax cable). While both prototypes were functional and recorded FM signals, their bandwidth of reception was well below that of US radio broadcast stations. Due to time constraints, we could not improve our receptions but we have isolated the issues to the following - poor signal strength in the basement room, non-ideal resistance of the coax cable, the length of the antenna leg and our failure to make cable knots at the ends of the legs.</p>
 <hr>
 
 </div>
@@ -13273,7 +13297,21 @@ F_g = G \frac{m_1 m_ 2}{r^2}
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Notes-to-the-TA">Notes to the TA<a class="anchor-link" href="#Notes-to-the-TA">&#182;</a></h1><p>buy <a href="https://www.amazon.com/Bingfu-Antenna-Receiver-Pioneer-Marantz/dp/B08HHXFH98/ref=asc_df_B08HHXFH98/?tag=hyprod-20&amp;linkCode=df0&amp;hvadid=475825775681&amp;hvpos=&amp;hvnetw=g&amp;hvrand=10966021251989471720&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9028540&amp;hvtargid=pla-1074118701481&amp;psc=1">https://www.amazon.com/Bingfu-Antenna-Receiver-Pioneer-Marantz/dp/B08HHXFH98/ref=asc_df_B08HHXFH98/?tag=hyprod-20&amp;linkCode=df0&amp;hvadid=475825775681&amp;hvpos=&amp;hvnetw=g&amp;hvrand=10966021251989471720&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9028540&amp;hvtargid=pla-1074118701481&amp;psc=1</a></p>
+<h1 id="Notes-to-the-TA">Notes to the TA<a class="anchor-link" href="#Notes-to-the-TA">&#182;</a></h1><p>Our group believes that it is the best interest of all future cohorts/students of this lab to have a FM antenna in the lab. Here is a link to one that we found on Amazon (<em>Bingfu FM Radio Dipole Antenna</em>) that is compatible with all the equipments we have and is really nice and cheap - <a href="https://www.amazon.com/Bingfu-Antenna-Receiver-Pioneer-Marantz/dp/B08HHXFH98/ref=asc_df_B08HHXFH98/?tag=hyprod-20&amp;linkCode=df0&amp;hvadid=475825775681&amp;hvpos=&amp;hvnetw=g&amp;hvrand=10966021251989471720&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9028540&amp;hvtargid=pla-1074118701481&amp;psc=1">https://www.amazon.com/Bingfu-Antenna-Receiver-Pioneer-Marantz/dp/B08HHXFH98/ref=asc_df_B08HHXFH98/?tag=hyprod-20&amp;linkCode=df0&amp;hvadid=475825775681&amp;hvpos=&amp;hvnetw=g&amp;hvrand=10966021251989471720&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9028540&amp;hvtargid=pla-1074118701481&amp;psc=1</a> Hope you find this information useful when planning for next semester.</p>
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="References">References<a class="anchor-link" href="#References">&#182;</a></h1><p><strong>[1] Leon W. Couch II , “Digital and Analog Communication Systems”, 7th Prentice-Hall, Inc., Englewood Cliffs, NJ, 2001. ISBN: 0-13-142492-0</strong></p>
+<p><strong>[2] Bernard Sklar, “Digital Communications Fundamentals and Applications”, Prentice Hall, 1988.</strong></p>
+<p><strong>[3] Saleh Faruque, “Radio Frequency Modulation Made Easy”, Springer Briefs in Electrical and Computer Engineering, 2016, 1st Ed. ISBN-13: 978-3319412009, ISBN-10: 3319412000</strong></p>
+<p><strong>[4] Armstrong, E. H. (May 1936). “A Method of Reducing Disturbances in Radio Signaling by a System of Frequency Modulation”. Proceedings of the IRE (IRE) 24 (5): 689–740. doi:1109/JRPROC.1936.227383.</strong></p>
+<p><strong>[5] Fourier, J. B. Joseph; Freeman, Alexander, translator (1878), The Analytical Theory of Heat, The University Press</strong></p>
+<hr>
 
 </div>
 </div>
@@ -13282,12 +13320,14 @@ F_g = G \frac{m_1 m_ 2}{r^2}
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Questions">Questions<a class="anchor-link" href="#Questions">&#182;</a></h1><p><strong>1. Why are FM waves used more for car radios than AM waves? Do planes use FM or AM waves? Why?</strong></p>
-<p>Aviation voice radios use VHF AM. AM is used so that multiple stations on the same channel can be received. (Use of FM would result in stronger stations blocking out reception of weaker stations due to FM's capture effect). Aircraft fly high enough that their transmitters can be received hundreds of miles (kilometres) away, even though they are using VHF. The one reason is when the aviation band first started long ago AM was the easier mode to make equipment for. but the main reason is if one is transmitting on an AM aviation channel and another air craft has an emergency they can transmit on same channel and can be heard along with the first station. this would not happen on FM where only one station would be heard, the strongest one.</p>
+<p>Very many things affect the amplitude of a radio wave, from driving under a bridge or power line, to lightning, to electrical noise from a vehicle’s spark plugs. All of these things are read as static or noise in an AM receiver. None of these things change the frequency of a radio wave. Virtually nothing does. So FM systems are impervious to the types of noise that can make AM annoying if not unusable. So for that reason it (FM waves) is a much better system for car radio systems.</p>
+<p>Planes use AM waves (in particular VHF AM). AM is used so that multiple stations on the same channel can be received. (Use of FM would result in stronger stations blocking out reception of weaker stations due to FM's capture effect). The planes fly high enough that their transmitters can be received hundreds of miles away, even though they are using VHF. Interestingly, I have learned that one of the reasons for this AM adoption in planes initially was simply because of easy of instrumentation (FM was new technology and expensive hence aviation economics prevented early adaptation).</p>
 <hr>
 <p><strong>2. What is a frequency discriminator?</strong></p>
-<p>A frequency discriminator is a converter of frequency changes into amplitude changes. Discriminators are used in various applications, one of which is the direct demodulation of fre- quency modulated signals</p>
+<p>A frequency discriminator is a converter of frequency changes into amplitude changes. Another term for frequency discriminator is frequency demodulator.</p>
 <hr>
 <p><strong>3. What is a demodulator? Is there more than one type?</strong></p>
+<p>A demodulator is an electronic circuit (or computer program in a software-defined radio) that is used to recover the information content of a modulated carrier wave. Since there are many types of modulation hence there are many types of demodulators (i.e. more than one).</p>
 <hr>
 
 </div>
